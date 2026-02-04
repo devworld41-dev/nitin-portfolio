@@ -98,6 +98,9 @@ export default function App() {
                 <a className="button" href="#projects">
                   View projects
                 </a>
+                <a className="button buttonGhost" href="/Nitin_Kishore_Resume.pdf" download>
+                  Download resume
+                </a>
                 <a className="button buttonGhost" href="#contact">
                   Contact
                 </a>
