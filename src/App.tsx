@@ -4,6 +4,7 @@ const nav = [
   { label: 'About', href: '#about' },
   { label: 'Projects', href: '#projects' },
   { label: 'Skills', href: '#skills' },
+  { label: 'Resume', href: '/Nitin_Kishore_Resume.pdf' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -60,7 +61,12 @@ export default function App() {
 
           <nav className="nav">
             {nav.map((n) => (
-              <a key={n.href} href={n.href} className="navLink">
+              <a
+                key={n.href}
+                href={n.href}
+                className="navLink"
+                {...(n.href.endsWith('.pdf') ? { target: '_blank', rel: 'noreferrer' } : {})}
+              >
                 {n.label}
               </a>
             ))}
@@ -97,6 +103,9 @@ export default function App() {
               <div className="heroCtas">
                 <a className="button" href="#projects">
                   View projects
+                </a>
+                <a className="button buttonGhost" href="/Nitin_Kishore_Resume.pdf" target="_blank" rel="noreferrer">
+                  View resume
                 </a>
                 <a className="button buttonGhost" href="/Nitin_Kishore_Resume.pdf" download>
                   Download resume
