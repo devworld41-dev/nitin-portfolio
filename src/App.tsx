@@ -4,7 +4,7 @@ const nav = [
   { label: 'About', href: '#about' },
   { label: 'Projects', href: '#projects' },
   { label: 'Skills', href: '#skills' },
-  { label: 'Resume', href: '/Nitin_Kishore_Resume.pdf' },
+  { label: 'Resume', href: `${import.meta.env.BASE_URL}Nitin_Kishore_Resume.pdf` },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -104,10 +104,19 @@ export default function App() {
                 <a className="button" href="#projects">
                   View projects
                 </a>
-                <a className="button buttonGhost" href="/Nitin_Kishore_Resume.pdf" target="_blank" rel="noreferrer">
+                <a
+                  className="button buttonGhost"
+                  href={`${import.meta.env.BASE_URL}Nitin_Kishore_Resume.pdf`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   View resume
                 </a>
-                <a className="button buttonGhost" href="/Nitin_Kishore_Resume.pdf" download>
+                <a
+                  className="button buttonGhost"
+                  href={`${import.meta.env.BASE_URL}Nitin_Kishore_Resume.pdf`}
+                  download
+                >
                   Download resume
                 </a>
                 <a className="button buttonGhost" href="#contact">
